@@ -74,99 +74,134 @@ function acumulacionPasajesHospedajes() {
                 paquete.push(pasajes[0]) 
                 let hospedaje = prompt("¿Desea agregar hospedaje Queen Hotel(Barcelona) a su paquete? \n 1 - Si \n 2 - No o simplemente continuar") 
                 
-                    if(hospedaje === 1) {
-                        paquete.push(hospedajes[0])
-                        abonarCompra(); 
-                    } else {
-                        abonarCompra();
-                    }
-            break;        
+                if(hospedaje === "1") {
+                    paquete.push(hospedajes[0])
+                    abonarCompra() 
+                } else if(hospedaje === "2") {
+                    alert("Usted a seleccionado unicamente los pasajes!")
+                    abonarCompra() 
+                } else {
+                    alert("Opcion invalida")
+                }
+            break;   
+
             case "2":
                 paquete.push(pasajes[1]) 
                 let hospedaje2 = prompt("¿Desea agregar hospedaje Tea Tree Hotel(Londres) a su paquete? \n 1 - Si \n 2 - No o simplemente continuar")
                
-                    if(hospedaje2 === 1) {
-                        paquete.push(hospedajes[1])
-                        abonarCompra(); 
-                    } else {
-                        abonarCompra();
-                    }
-            break;            
+                if(hospedaje2 === "1") {
+                    paquete.push(hospedajes[1])
+                    abonarCompra()  
+                } else if(hospedaje2 === "2") {
+                    alert("Usted a seleccionado unicamente los pasajes!")
+                    abonarCompra() 
+                } else {
+                    alert("Opcion invalida")
+                }
+            break; 
+
             case "3":
                 paquete.push(pasajes[2])
                 let hospedaje3 = prompt("¿Desea agregar hospedaje Hotel Realeza(Bariloche) a su paquete? \n 1 - Si \n 2 - No o simplemente continuar") 
-                if(hospedaje3 === 1) {
+
+                if(hospedaje3 === "1") {
                     paquete.push(hospedajes[2])
-                    abonarCompra(); 
+                    abonarCompra()  
+                } else if(hospedaje3 === "2") {
+                    alert("Usted a seleccionado unicamente los pasajes!")
+                    abonarCompra() 
                 } else {
-                    abonarCompra();
-                }
-                
+                    alert("Opcion invalida")
+                }   
             break;
 
             case "4":
                 paquete.push(pasajes[3])
                 let hospedaje4 = prompt("¿Desea agregar hospedaje Passarela Hotel(Dubai) a su paquete? \n 1 - Si \n 2 - No o simplemente continuar") 
-                if(hospedaje4 === 1) {
+
+                if(hospedaje4 === "1") {
                     paquete.push(hospedajes[3])
-                    abonarCompra(); 
+                    abonarCompra()  
+                } else if(hospedaje4 === "2") {
+                    alert("Usted a seleccionado unicamente los pasajes!")
+                    abonarCompra() 
                 } else {
-                    abonarCompra();
+                    alert("Opcion invalida")
                 }
             break; 
 
             case "5":
                 paquete.push(pasajes[4])
                 let hospedaje5 = prompt("¿Desea agregar hospedaje Oz Resort(Seul) a su paquete? \n 1 - Si \n 2 - No o simplemente continuar")
-                if(hospedaje5 === 1) {
+
+                if(hospedaje5 === "1") {
                     paquete.push(hospedajes[4])
-                    abonarCompra(); 
+                    abonarCompra()  
+                } else if(hospedaje5 === "2") {
+                    alert("Usted a seleccionado unicamente los pasajes!")
+                    abonarCompra() 
                 } else {
-                    abonarCompra();
+                    alert("Opcion invalida")
                 }
             break; 
 
             case "6":
                 paquete.push(pasajes[5])
                 let hospedaje6 = prompt("¿Desea agregar hospedaje Candel Resort(Tokyo) a su paquete? \n 1 - Si \n 2 - No o simplemente continuar")
-                if(hospedaje6 === 1) {
+
+                if(hospedaje6 === "1") {
                     paquete.push(hospedajes[5])
-                    abonarCompra(); 
+                    abonarCompra()  
+                } else if(hospedaje6 === "2") {
+                    alert("Usted a seleccionado unicamente los pasajes!")
+                    abonarCompra() 
                 } else {
-                    abonarCompra();
+                    alert("Opcion invalida")
                 }
             break;  
 
             case "7":
                 paquete.push(pasajes[6])
                 let hospedaje7 = prompt("¿Desea agregar hospedaje Hotel el Bosque(Madrid) a su paquete? \n 1 - Si \n 2 - No o simplemente continuar")
-                if(hospedaje7 === 1) {
+
+                if(hospedaje7 === "1") {
                     paquete.push(hospedajes[6])
-                    abonarCompra(); 
+                    abonarCompra()  
+                } else if(hospedaje7 === "2") {
+                    alert("Usted a seleccionado unicamente los pasajes!")
+                    abonarCompra() 
                 } else {
-                    abonarCompra();
+                    alert("Opcion invalida")
                 }
             break;
 
             case "8":
                 paquete.push(pasajes[7])
                 let hospedaje8 = prompt("¿Desea agregar hospedaje Glamho Hotel(New York) a su paquete? \n 1 - Si \n 2 - No o simplemente continuar")
-                if(hospedaje8 === 1) {
+
+                if(hospedaje8 === "1") {
                     paquete.push(hospedajes[7])
-                    abonarCompra(); 
+                    abonarCompra()  
+                } else if(hospedaje8 === "2") {
+                    alert("Usted a seleccionado unicamente los pasajes!")
+                    abonarCompra() 
                 } else {
-                    abonarCompra();
+                    alert("Opcion invalida")
                 }
             break; 
 
             case "9":
                 paquete.push(pasajes[8])
                 let hospedaje9 = prompt("¿Desea agregar hospedaje La Reina Hotel(Cancun) a su paquete? \n 1 - Si \n 2 - No o simplemente continuar")
-                if(hospedaje9 === 1) {
+
+                if(hospedaje9 === "1") {
                     paquete.push(hospedajes[8])
-                    abonarCompra(); 
+                    abonarCompra()  
+                } else if(hospedaje9 === "2") {
+                    alert("Usted a seleccionado unicamente los pasajes!")
+                    abonarCompra() 
                 } else {
-                    abonarCompra();
+                    alert("Opcion invalida")
                 }
             break;
 
@@ -176,35 +211,50 @@ function acumulacionPasajesHospedajes() {
         }
 }    
 
-    acumulacionPasajesHospedajes();
+acumulacionPasajesHospedajes();
 
-//suma de pasaje + hospedaje 
+//suma de pasaje + hospedaje  
 
 function abonarCompra() {
     let total = paquete.reduce((acumulador,item) => acumulador + item.precio,0);
     let pagar = prompt("¿Como desea abonar? \n 1- Tarjeta de Credito \n 2- Transferencia o Efectivo(Descuento del 10%)")
 
     switch(pagar) {
-        case "1": {
+        case "1": 
             alert("El monto total es de " + total + " gracias por su compra! A continuacion le imprimiremos su pasaje")
-        }break;
-        case "2": {
+            break;
+        case "2": 
             total = total * 0.90;
             alert("El monto total es de " + total + " gracias por su compra! A continuacion le imprimiremos su pasaje")
-        }break;
-        default: {
+            break;
+        default: 
           alert("Opcion invalida")
-        }
     }
 
     for(let item of paquete) {
         alert("Pasaje a: \n" + item.nombre + "\n" + total)
     }
 
+    consultaFinal();
+}
+
+
+
+function consultaFinal() {
     let consulta = prompt("¿Desea agregar otro viaje a su paquete de compras? \n 1- Si \n 2- No o continuar")
-    if(consulta === 1) {
+    if(consulta === "1") {
         acumulacionPasajesHospedajes();
-    } else {
+    } else if(consulta === "2"){
         alert("Proceso de compra finalizado, muchas gracias! :)")
+    } else {
+        alert("Opcion invalida")
     }
 }
+
+
+
+
+
+
+
+
