@@ -23,7 +23,7 @@
             <ul class="nav-ul">
                 <div class="nav-ul-li-container">
                     <span class="jam jam-backpack"></span>
-                    <li class="nav-ul-li"><a href="paquetes.html">Paquetes</a></li>   
+                    <li class="nav-ul-li"><a href="pasajes.html">Pasajes</a></li>   
                 </div>
                  <div class="nav-ul-li-container">
                     <span class="jam jam-home"></span>
@@ -40,13 +40,13 @@
         </nav>
 
         <div class="login-container">
-            <div class="login-icons">
+            <div id="iniciar-sesion" class="login-icons">
                 <span class="jam jam-user"></span>
                 <p>Iniciar sesión</p>
             </div>
-            <div class="login-icons">
-                <span class="jam jam-calendar-f"></span>
-                <p>Mis viajes</p>
+            <div id="registrarse" class="login-icons">
+                <span class="jam jam-rocket"></span>
+                <p>Registrarse</p>
             </div>
         </div>
 
@@ -57,7 +57,7 @@
 
     <section class="hospedajes-titulo">
         <article>
-            <h1>Te ofrecemos los mejores hospedajes!</h1>
+            <h1>Te ofrecemos 3 noches en los mejores hospedajes!</h1>
             <p>Hoteles de 5 estrellas</p>
             <span class="jam jam-star-f"></span>
             <span class="jam jam-star-f"></span>
@@ -91,69 +91,110 @@
                 <img src="../assets/hotel-barcelona.jpg" alt="imagen hotel barcelona">
                 <h4>España - Barcelona</h4>
                 <p>Queen Hotel</p>
-                <p>$15000 ARS por noche</p>
+                <p>$15000 ARS - 3 noches</p>
             </div>
 
             <div>
                 <img src="../assets/hotel-londres.jpg" alt="imagen hotel londres">
                 <h4>Inglaterra - Londres</h4>
                 <p>Tea Tree Hotel</p>
-                <p>$18000 ARS por noche</p>
+                <p>$18000 ARS - 3 noches</p>
             </div>
 
             <div>
                 <img src="../assets/hotel-bariloche.jpg" alt="imagen hotel bariloche">
                 <h4>Argentina - Bariloche</h4>
                 <p>Hotel Realeza</p>
-                <p>$8000 ARS por noche</p>
+                <p>$8000 ARS - 3 noches</p>
             </div>
 
             <div>
                 <img src="../assets/hotel-dubai.jpg" alt="imagen hotel dubai">
                 <h4>Emiratos Árabes - Dubai</h4>
                 <p>Passarela Hotel</p>
-                <p>$28000 ARS por noche</p>
+                <p>$28000 ARS - 3 noches</p>
             </div>
 
             <div>
                 <img src="../assets/hotel-seul.jpg" alt="imagen hotel seul">
                 <h4>Corea del Sur - Seul</h4>
                 <p>Oz Resort</p>
-                <p>$20000 ARS por noche</p>
+                <p>$20000 ARS - 3 noches</p>
             </div>
 
             <div>
                 <img src="../assets/hotel-tokyo.jpg" alt="imagen hotel tokyo">
                 <h4>Japón - Tokyo</h4>
                 <p>Candel Resort</p>
-                <p>$15000 ARS por noche</p>
+                <p>$15000 ARS - 3 noches</p>
             </div>
 
             <div>
                 <img src="../assets/hotel-madrid.jpg" alt="imagen hotel madrid">
                 <h4>España - Madrid</h4>
                 <p>Hotel El Bosque</p>
-                <p>$15000 ARS por noche</p>
+                <p>$15000 ARS - 3 noches</p>
             </div>
 
             <div>
                 <img src="../assets/hotel-newyork.jpg" alt="imagen hotel new york">
                 <h4>Estados Unidos - Nueva York</h4>
                 <p>Glamho Hotel</p>
-                <p>$22000 ARS por noche</p>
+                <p>$22000 ARS - 3 noches</p>
             </div>
 
             <div>
                 <img src="../assets/hotel-cancun.jpg" alt="imagen hotel cancun">
                 <h4>México - Cancún</h4>
                 <p>La Reina Hotel</p>
-                <p>$24000 ARS por noche</p>
+                <p>$24000 ARS - 3 noches</p>
             </div>
         </article>
+    </section>
+
+
+    <section id="formulario-login-contenedor" class="formulario-login-contenedor">
+        <form id="formulario-login" action="">
+            <div class="formulario-items">
+                <img src="../assets/login-imagen.svg" alt="login imagen">
+            </div>
+            <div class="formulario-items">
+                <span class="jam jam-user"></span>
+                <input type="text" name="nombre" placeholder="Ingrese su nombre de usuario">
+            </div>
+                    
+            <div class="formulario-items">
+                <span class="jam jam-key-f"></span>
+                <input type="password" name="email" placeholder="Ingrese su contraseña">
+            </div>
+    
+            <button id="btn-login">Iniciar Sesion</button>
+        </form>
+    </section>
+
+    <section id="formulario-registro-contenedor" class="formulario-registro-contenedor">
+        <form id="formulario-registro" action="">
+            <div class="formulario-items">
+                <img src="../assets/registro-imagen.svg" alt="registro imagen">
+            </div>
+            <div class="formulario-items">
+                <span class="jam jam-user"></span>
+                <input type="text" name="nombre" placeholder="Cree un nombre de usuario">
+            </div>
+                    
+            <div class="formulario-items">
+                <span class="jam jam-key-f"></span>
+                <input type="password" name="email" placeholder="Cree una contraseña">
+            </div>
+    
+            <button id="btn-registro">Registrarse</button>
+        </form>
     </section>
 
     <footer class="footer">
         <p>Desarrollado por Ivan Agustin Pugliese - Todos los derechos reservados</p>
     </footer>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>

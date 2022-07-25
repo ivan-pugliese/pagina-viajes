@@ -23,7 +23,7 @@
             <ul class="nav-ul">
                 <div class="nav-ul-li-container">
                     <span class="jam jam-backpack"></span>
-                    <li class="nav-ul-li"><a href="paquetes.html">Paquetes</a></li>   
+                    <li class="nav-ul-li"><a href="pasajes.html">Pasajes</a></li>   
                 </div>
                  <div class="nav-ul-li-container">
                     <span class="jam jam-home"></span>
@@ -40,13 +40,13 @@
         </nav>
 
         <div class="login-container">
-            <div class="login-icons">
+            <div id="iniciar-sesion" class="login-icons">
                 <span class="jam jam-user"></span>
                 <p>Iniciar sesión</p>
             </div>
-            <div class="login-icons">
-                <span class="jam jam-calendar-f"></span>
-                <p>Mis viajes</p>
+            <div id="registrarse" class="login-icons">
+                <span class="jam jam-rocket"></span>
+                <p>Registrarse</p>
             </div>
         </div>
 
@@ -58,7 +58,7 @@
     <section class="paquetes-titulo">
         <article>
             <h1><span class="jam jam-plane-f"></span>IPdreams está para cumplir tus sueños</h1>
-            <p>Seleccioná tu Paquete completo, elegí las fechas y reserva tus pasajes!
+            <p>Seleccioná tus pasajes, elegí las fechas, reservá en simples pasos y arma tu paquete!
             </p>
         </article>
         
@@ -72,49 +72,49 @@
     </section>
 
     <section class="paquetes-viajes">
-        <div>
+        <div id="pasaje-barcelona">
             <img src="../assets/barcelona.jpg" alt="imagen barcelona">
             <h4>España - Barcelona</h4>
             <p>Ida y vuelta</p>
             <p>$150000 ARS</p>
         </div>
 
-        <div>
+        <div id="pasaje-londres">
             <img src="../assets/londres.jpg" alt="imagen londres">
             <h4>Inglaterra - Londres</h4>
             <p>Ida y vuelta</p>
             <p>$195000 ARS</p>
         </div>
 
-        <div>
+        <div id="pasaje-bariloche">
             <img src="../assets/bariloche.jpg" alt="imagen bariloche">
             <h4>Argentina - Bariloche</h4>
             <p>Ida y vuelta</p>
             <p>$90000 ARS</p>
         </div>
 
-        <div>
+        <div id="pasaje-dubai">
             <img src="../assets/dubai.jpg" alt="imagen dubai">
             <h4>Emiratos Árabes - Dubai</h4>
             <p>Ida y vuelta</p>
             <p>$250000 ARS</p>
         </div>
 
-        <div>
+        <div id="pasaje-seul">
             <img src="../assets/seul.jpg" alt="imagen seul">
             <h4>Corea del Sur - Seul</h4>
             <p>Ida y vuelta</p>
             <p>$265000 ARS</p>
         </div>
 
-        <div>
+        <div id="pasaje-tokyo">
             <img src="../assets/tokyo.jpg" alt="imagen tokyo">
             <h4>Japón - Tokyo</h4>
             <p>Ida y vuelta</p>
             <p>$265000 ARS</p>
         </div>
 
-        <div>
+        <div id="pasaje-madrid">
             <img src="../assets/madrid.jpg" alt="imagen madrid">
             <h4>España - Madrid</h4>
             <p>Ida y vuelta</p>
@@ -122,7 +122,7 @@
             <p class="precio-oferta">$90000 ARS</p>
         </div>
 
-        <div>
+        <div id="pasaje-newyork">
             <img src="../assets/new york.jpg" alt="imagen new york">
             <h4>Estados Unidos - New York</h4>
             <p>Ida y vuelta</p>
@@ -130,7 +130,7 @@
             <p class="precio-oferta">$110000 ARS</p>
         </div>
 
-        <div>
+        <div id="pasaje-cancun">
             <img src="../assets/cancun.jpg" alt="imagen cancun">
             <h4>México - Cancún</h4>
             <p>Ida y vuelta</p>
@@ -140,8 +140,48 @@
     </section>
     
 
+    <section id="formulario-login-contenedor" class="formulario-login-contenedor">
+        <form id="formulario-login" action="">
+            <div class="formulario-items">
+                <img src="../assets/login-imagen.svg" alt="login imagen">
+            </div>
+            <div class="formulario-items">
+                <span class="jam jam-user"></span>
+                <input type="text" name="nombre" placeholder="Ingrese su nombre de usuario">
+            </div>
+                    
+            <div class="formulario-items">
+                <span class="jam jam-key-f"></span>
+                <input type="password" name="email" placeholder="Ingrese su contraseña">
+            </div>
+    
+            <button id="btn-login">Iniciar Sesion</button>
+        </form>
+    </section>
+
+    <section id="formulario-registro-contenedor" class="formulario-registro-contenedor">
+        <form id="formulario-registro" action="">
+            <div class="formulario-items">
+                <img src="../assets/registro-imagen.svg" alt="registro imagen">
+            </div>
+            <div class="formulario-items">
+                <span class="jam jam-user"></span>
+                <input type="text" name="nombre" placeholder="Cree un nombre de usuario">
+            </div>
+                    
+            <div class="formulario-items">
+                <span class="jam jam-key-f"></span>
+                <input type="password" name="email" placeholder="Cree una contraseña">
+            </div>
+    
+            <button id="btn-registro">Registrarse</button>
+        </form>
+    </section>
+
     <footer class="footer">
         <p>Desarrollado por Ivan Agustin Pugliese - Todos los derechos reservados</p>
     </footer>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>

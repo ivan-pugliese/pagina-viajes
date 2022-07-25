@@ -1,36 +1,22 @@
-let bienvenida = alert("Bienvenidos a IPdreams, estamos para cumplir tus sueños!");
+//Evento de Incio de sesion
 
+let login = document.getElementById('iniciar-sesion');
 
+login.addEventListener('click', loggear) 
 
-//Registro
-
-function registroUsuario() {
-    return prompt("Cree un nombre de usuario para poder continuar:")
+function loggear() {
+    document.querySelector('#formulario-login-contenedor').style.display = 'flex';
 }
 
-function registroContraseña() {
-    return prompt("Ingrese una contraseña para finalizar:")
+//Evento de Registro
+
+let registro = document.getElementById('registrarse');
+
+registro.addEventListener('click', registrar) 
+
+function registrar() {
+    document.querySelector('#formulario-registro-contenedor').style.display = 'flex';
 }
-
-let usuarioRegistrado = registroUsuario();
-let contraseñaRegistrada = registroContraseña();
-alert("Bienvenido/a " + usuarioRegistrado + " usted se ha registrado correctamente!")
-
-//Inicio de sesion
-
-function login(usuarioRegistrado, contraseñaRegistrada) {
-    let usuario = prompt("Inicie sesion ingresando su nombre de usuario:")
-    let contraseña = prompt("Ingrese su contraseña:")
-
-    while(usuario !== usuarioRegistrado || contraseña !== contraseñaRegistrada) {
-        alert("Usted ha ingresado un usuario y/o contraseña invalida, por favor, intente nuevamente.")
-        login();
-    }
-    alert("Hola! que tengas una linda experiencia " + usuarioRegistrado)
-}
-
-login(usuarioRegistrado, contraseñaRegistrada)
-
 
 
 //Pasajes
@@ -62,156 +48,249 @@ const hospedajes = [
    ]
 
 
+
 //armar paquete con pasajes y hospedajes 
 
 const paquete = [];
 
-function acumulacionPasajesHospedajes() {
-    let entrada = prompt("A continuación, selecciona tu pasaje y arma tu paquete!  \n 1 - Barcelona - 150000 ARS \n 2 - Londres - 195000 ARS \n 3 - Bariloche - 90000 ARS \n 4 - Dubai - 250000 ARS \n 5 - Seul - 265000 ARS \n 6 - Tokyo - 265000 ARS \n 7 - Madrid -90000 ARS \n 8 - New York - 110000 ARS \n 9 - Cancun - 120000 ARS"); 
+function pasajeBarcelona() {
 
-        switch(entrada) {
-            case "1": 
-                paquete.push(pasajes[0]) 
-                let hospedaje = prompt("¿Desea agregar hospedaje Queen Hotel(Barcelona) a su paquete? \n 1 - Si \n 2 - No o simplemente continuar") 
-                
-                if(hospedaje === "1") {
-                    paquete.push(hospedajes[0])
-                    abonarCompra() 
-                } else if(hospedaje === "2") {
-                    alert("Usted a seleccionado unicamente los pasajes!")
-                    abonarCompra() 
-                } else {
-                    alert("Opcion invalida")
-                }
-            break;   
+    paquete.push(pasajes[0])
 
-            case "2":
-                paquete.push(pasajes[1]) 
-                let hospedaje2 = prompt("¿Desea agregar hospedaje Tea Tree Hotel(Londres) a su paquete? \n 1 - Si \n 2 - No o simplemente continuar")
-               
-                if(hospedaje2 === "1") {
-                    paquete.push(hospedajes[1])
-                    abonarCompra()  
-                } else if(hospedaje2 === "2") {
-                    alert("Usted a seleccionado unicamente los pasajes!")
-                    abonarCompra() 
-                } else {
-                    alert("Opcion invalida")
-                }
-            break; 
+    let entrada = prompt("Usted a seleccionado pasaje a Barcelona (ida y vuelta), desea agregar hospedaje Queen Hotel (Barcelona) a su paquete? \n 1 - Si \n 2 - No ")
 
-            case "3":
-                paquete.push(pasajes[2])
-                let hospedaje3 = prompt("¿Desea agregar hospedaje Hotel Realeza(Bariloche) a su paquete? \n 1 - Si \n 2 - No o simplemente continuar") 
-
-                if(hospedaje3 === "1") {
-                    paquete.push(hospedajes[2])
-                    abonarCompra()  
-                } else if(hospedaje3 === "2") {
-                    alert("Usted a seleccionado unicamente los pasajes!")
-                    abonarCompra() 
-                } else {
-                    alert("Opcion invalida")
-                }   
-            break;
-
-            case "4":
-                paquete.push(pasajes[3])
-                let hospedaje4 = prompt("¿Desea agregar hospedaje Passarela Hotel(Dubai) a su paquete? \n 1 - Si \n 2 - No o simplemente continuar") 
-
-                if(hospedaje4 === "1") {
-                    paquete.push(hospedajes[3])
-                    abonarCompra()  
-                } else if(hospedaje4 === "2") {
-                    alert("Usted a seleccionado unicamente los pasajes!")
-                    abonarCompra() 
-                } else {
-                    alert("Opcion invalida")
-                }
-            break; 
-
-            case "5":
-                paquete.push(pasajes[4])
-                let hospedaje5 = prompt("¿Desea agregar hospedaje Oz Resort(Seul) a su paquete? \n 1 - Si \n 2 - No o simplemente continuar")
-
-                if(hospedaje5 === "1") {
-                    paquete.push(hospedajes[4])
-                    abonarCompra()  
-                } else if(hospedaje5 === "2") {
-                    alert("Usted a seleccionado unicamente los pasajes!")
-                    abonarCompra() 
-                } else {
-                    alert("Opcion invalida")
-                }
-            break; 
-
-            case "6":
-                paquete.push(pasajes[5])
-                let hospedaje6 = prompt("¿Desea agregar hospedaje Candel Resort(Tokyo) a su paquete? \n 1 - Si \n 2 - No o simplemente continuar")
-
-                if(hospedaje6 === "1") {
-                    paquete.push(hospedajes[5])
-                    abonarCompra()  
-                } else if(hospedaje6 === "2") {
-                    alert("Usted a seleccionado unicamente los pasajes!")
-                    abonarCompra() 
-                } else {
-                    alert("Opcion invalida")
-                }
-            break;  
-
-            case "7":
-                paquete.push(pasajes[6])
-                let hospedaje7 = prompt("¿Desea agregar hospedaje Hotel el Bosque(Madrid) a su paquete? \n 1 - Si \n 2 - No o simplemente continuar")
-
-                if(hospedaje7 === "1") {
-                    paquete.push(hospedajes[6])
-                    abonarCompra()  
-                } else if(hospedaje7 === "2") {
-                    alert("Usted a seleccionado unicamente los pasajes!")
-                    abonarCompra() 
-                } else {
-                    alert("Opcion invalida")
-                }
-            break;
-
-            case "8":
-                paquete.push(pasajes[7])
-                let hospedaje8 = prompt("¿Desea agregar hospedaje Glamho Hotel(New York) a su paquete? \n 1 - Si \n 2 - No o simplemente continuar")
-
-                if(hospedaje8 === "1") {
-                    paquete.push(hospedajes[7])
-                    abonarCompra()  
-                } else if(hospedaje8 === "2") {
-                    alert("Usted a seleccionado unicamente los pasajes!")
-                    abonarCompra() 
-                } else {
-                    alert("Opcion invalida")
-                }
-            break; 
-
-            case "9":
-                paquete.push(pasajes[8])
-                let hospedaje9 = prompt("¿Desea agregar hospedaje La Reina Hotel(Cancun) a su paquete? \n 1 - Si \n 2 - No o simplemente continuar")
-
-                if(hospedaje9 === "1") {
-                    paquete.push(hospedajes[8])
-                    abonarCompra()  
-                } else if(hospedaje9 === "2") {
-                    alert("Usted a seleccionado unicamente los pasajes!")
-                    abonarCompra() 
-                } else {
-                    alert("Opcion invalida")
-                }
-            break;
-
-            default:
-                alert("Opcion invalida");
-            break;          
+        if(entrada === "1") {
+        paquete.push(hospedajes[0])
+        abonarCompra() 
+        } else if(entrada === "2") {
+        alert("Usted a seleccionado unicamente los pasajes!")
+        abonarCompra() 
+        } else {
+        alert("Opcion invalida")
         }
-}    
+}
+//Evento de alert para armar pasaje
 
-acumulacionPasajesHospedajes();
+let barcelona = document.getElementById('pasaje-barcelona');
+
+barcelona.addEventListener('click', pasajeBarcelona);
+
+
+
+
+
+function pasajeLondres() {
+
+    paquete.push(pasajes[1])
+
+    let entrada = prompt("Usted a seleccionado pasaje a Londres (ida y vuelta), desea agregar hospedaje Tea Tree Hotel (Londres) a su paquete? \n 1 - Si \n 2 - No ")
+   
+       if(entrada === "1") {
+       paquete.push(hospedajes[1])
+       abonarCompra() 
+       } else if(entrada === "2") {
+       alert("Usted a seleccionado unicamente los pasajes!")
+       abonarCompra() 
+       } else {
+       alert("Opcion invalida")
+       }
+}
+//Evento de alert para armar pasaje
+
+let londres = document.getElementById('pasaje-londres');
+
+londres.addEventListener('click',  pasajeLondres)
+
+
+
+
+
+function pasajeBariloche() {
+
+    paquete.push(pasajes[2])
+
+    let entrada = prompt("Usted a seleccionado pasaje a Bariloche (ida y vuelta), desea agregar hospedaje Hotel Realeza (Bariloche) a su paquete? \n 1 - Si \n 2 - No ")
+   
+       if(entrada === "1") {
+       paquete.push(hospedajes[2])
+       abonarCompra() 
+       } else if(entrada === "2") {
+       alert("Usted a seleccionado unicamente los pasajes!")
+       abonarCompra() 
+       } else {
+       alert("Opcion invalida")
+       }
+}
+//Evento de alert para armar pasaje
+
+let bariloche = document.getElementById('pasaje-bariloche');
+
+bariloche.addEventListener('click',  pasajeBariloche)
+
+
+
+
+
+function pasajeDubai() {
+
+    paquete.push(pasajes[3])
+
+    let entrada = prompt("Usted a seleccionado pasaje a Dubai (ida y vuelta), desea agregar hospedaje Passarela Hotel (Dubai) a su paquete? \n 1 - Si \n 2 - No ")
+   
+       if(entrada === "1") {
+       paquete.push(hospedajes[3])
+       abonarCompra() 
+       } else if(entrada === "2") {
+       alert("Usted a seleccionado unicamente los pasajes!")
+       abonarCompra() 
+       } else {
+       alert("Opcion invalida")
+       }
+}
+
+//Evento de alert para armar pasaje
+
+let dubai = document.getElementById('pasaje-dubai');
+
+dubai.addEventListener('click',  pasajeDubai)
+
+
+
+   
+function pasajeSeul() {
+
+    paquete.push(pasajes[4])
+
+    let entrada = prompt("Usted a seleccionado pasaje a Seul (ida y vuelta), desea agregar hospedaje Oz Resort (Seul) a su paquete? \n 1 - Si \n 2 - No ")
+   
+       if(entrada === "1") {
+       paquete.push(hospedajes[4])
+       abonarCompra() 
+       } else if(entrada === "2") {
+       alert("Usted a seleccionado unicamente los pasajes!")
+       abonarCompra() 
+       } else {
+       alert("Opcion invalida")
+       }
+}
+
+//Evento de alert para armar pasaje
+
+let seul = document.getElementById('pasaje-seul');
+
+seul.addEventListener('click',  pasajeSeul)
+
+
+
+
+
+function pasajeTokyo() {
+
+    paquete.push(pasajes[5])
+
+    let entrada = prompt("Usted a seleccionado pasaje a Tokyo (ida y vuelta), desea agregar hospedaje Candel Resort (Tokyo) a su paquete? \n 1 - Si \n 2 - No ")
+   
+       if(entrada === "1") {
+       paquete.push(hospedajes[5])
+       abonarCompra() 
+       } else if(entrada === "2") {
+       alert("Usted a seleccionado unicamente los pasajes!")
+       abonarCompra() 
+       } else {
+       alert("Opcion invalida")
+       }
+}
+
+//Evento de alert para armar pasaje
+
+let tokyo = document.getElementById('pasaje-tokyo');
+
+tokyo.addEventListener('click',  pasajeTokyo)
+
+
+
+
+
+function pasajeMadrid() {
+
+    paquete.push(pasajes[6])
+
+    let entrada = prompt("Usted a seleccionado pasaje a Madrid (ida y vuelta), desea agregar hospedaje Hotel el Bosque (Madrid) a su paquete? \n 1 - Si \n 2 - No ")
+   
+       if(entrada === "1") {
+       paquete.push(hospedajes[6])
+       abonarCompra() 
+       } else if(entrada === "2") {
+       alert("Usted a seleccionado unicamente los pasajes!")
+       abonarCompra() 
+       } else {
+       alert("Opcion invalida")
+       }
+}
+
+//Evento de alert para armar pasaje
+
+let madrid = document.getElementById('pasaje-madrid');
+
+madrid.addEventListener('click',  pasajeMadrid)
+
+
+
+
+
+function pasajeNewYork() {
+
+    paquete.push(pasajes[7])
+
+    let entrada = prompt("Usted a seleccionado pasaje a New York (ida y vuelta), desea agregar hospedaje Gramho Hotel (New York) a su paquete? \n 1 - Si \n 2 - No ")
+   
+       if(entrada === "1") {
+       paquete.push(hospedajes[7])
+       abonarCompra() 
+       } else if(entrada === "2") {
+       alert("Usted a seleccionado unicamente los pasajes!")
+       abonarCompra() 
+       } else {
+       alert("Opcion invalida")
+       }
+}
+
+//Evento de alert para armar pasaje
+
+let newYork = document.getElementById('pasaje-newyork');
+
+newYork.addEventListener('click',  pasajeNewYork)
+
+
+
+
+
+function pasajeCancun() {
+
+    paquete.push(pasajes[8])
+
+    let entrada = prompt("Usted a seleccionado pasaje a Cancun (ida y vuelta), desea agregar hospedaje La Reina Hotel (Cancún) a su paquete? \n 1 - Si \n 2 - No ")
+   
+       if(entrada === "1") {
+       paquete.push(hospedajes[8])
+       abonarCompra() 
+       } else if(entrada === "2") {
+       alert("Usted a seleccionado unicamente los pasajes!")
+       abonarCompra() 
+       } else {
+       alert("Opcion invalida")
+       }
+}
+
+//Evento de alert para armar pasaje
+
+let cancun = document.getElementById('pasaje-cancun');
+
+cancun.addEventListener('click',  pasajeCancun)
+
+
+
+
 
 //suma de pasaje + hospedaje  
 
@@ -221,11 +300,12 @@ function abonarCompra() {
 
     switch(pagar) {
         case "1": 
-            alert("El monto total es de " + total + " gracias por su compra! A continuacion le imprimiremos su pasaje")
+            total = total * 1.21;
+            alert("El monto total es de " + total + " con impuestos IVA incluidos, gracias por su compra! A continuacion le imprimiremos su pasaje")
             break;
         case "2": 
             total = total * 0.90;
-            alert("El monto total es de " + total + " gracias por su compra! A continuacion le imprimiremos su pasaje")
+            alert("El monto total es de " + total + " con impuestos IVA incluidos, gracias por su compra! A continuacion le imprimiremos su pasaje")
             break;
         default: 
           alert("Opcion invalida")
@@ -249,7 +329,10 @@ function consultaFinal() {
     } else {
         alert("Opcion invalida")
     }
-}
+}  
+
+
+
 
 
 
